@@ -7,6 +7,12 @@ Ideana olisi tehdä platformer hyppely peli jossa on vähän tarinaa mukana.
 
 Pelaaja herää "mapin pohjalta" ja tehtävänä on kiivetä ylöspäin parkoomalla ja tehden pusleja -> kiiveten pikku hiljaa ylös päin
 
+## Pelin kehitys tässä vaiheessa
+### 0.00 -> Pelin alun esittely
+### 0.53s -> Koodin näyttö (ei pakko näyttää koko videota)
+
+
+
 ## Godot-projektin GitHub-käyttöohje
 Lataus ja käyttöönotto
 
