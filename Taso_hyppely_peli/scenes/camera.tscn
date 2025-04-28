@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dektcrtyky0bi"]
+
+[ext_resource type="Script" uid="uid://cofkmfprvjlxp" path="res://scripts/RoomBasedCamera.gd" id="1_cvpoc"]
+
+[node name="RoomCamera" type="Camera2D"]
+position = Vector2(402, 819)
+scale = Vector2(922.008, -23272.8)
+zoom = Vector2(4, 4)
+script = ExtResource("1_cvpoc")

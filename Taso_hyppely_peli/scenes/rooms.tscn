@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://b840r5tndv0pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lgwd"]
+size = Vector2(909.25, 465)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2141"]
+size = Vector2(804, 505)
+
+[node name="room2" type="Area2D"]
+visible = false
+position = Vector2(-426, -281)
+collision_layer = 512
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 128
+position = Vector2(-30, 14)
+shape = SubResource("RectangleShape2D_2lgwd")
+
+[node name="room3" type="Area2D" parent="."]
+visible = false
+position = Vector2(408, -685)
+collision_layer = 512
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room3"]
+position = Vector2(57, 13.5)
+shape = SubResource("RectangleShape2D_x2141")
