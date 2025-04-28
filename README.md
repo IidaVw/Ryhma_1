@@ -28,4 +28,4 @@ Lataus ja käyttöönotto
 
 Ennen työskentelyn aloittamista: git pull
 
-# Jos tarvitsee apua Projektin avaamiseen aina saa kysyä ryhmässä apua :D
+### Jos tarvitsee apua Projektin avaamiseen aina saa kysyä ryhmässä apua :D
