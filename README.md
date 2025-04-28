@@ -29,3 +29,5 @@ Lataus ja käyttöönotto
 Ennen työskentelyn aloittamista: git pull
 
 ### Jos tarvitsee apua Projektin avaamiseen aina saa kysyä ryhmässä apua :D
+![image](https://github.com/user-attachments/assets/ea1ff02f-c87e-4799-b718-e3bede2f1864)
+
