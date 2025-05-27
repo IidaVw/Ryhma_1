@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwi7yu4yirbq2"]
+
+[ext_resource type="Script" uid="uid://k8m8184vwgl0" path="res://ui.gd" id="1_nt7q6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qltsp"]
+
+[node name="UI" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nt7q6")
+
+[node name="DeathLabel" type="Label" parent="."]
+z_index = 5
+offset_left = 2.0
+offset_top = -20.0
+offset_right = 158.0
+offset_bottom = -4.0
+text = "Deaths: 0"
+label_settings = SubResource("LabelSettings_qltsp")
+
+[node name="CoinLabe" type="Label" parent="."]
+z_index = 5
+offset_left = 2.0
+offset_top = -40.0
+offset_right = 132.0
+offset_bottom = -24.0
+text = "Coins: 0"
+label_settings = SubResource("LabelSettings_qltsp")

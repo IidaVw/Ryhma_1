@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dir7ojomsjglh"]
+
+[ext_resource type="Script" uid="uid://c5x8pt5faxinb" path="res://scenes/boots.gd" id="1_n61mk"]
+[ext_resource type="Texture2D" uid="uid://xqnuq8y40bnm" path="res://scenes/bloks/pixil-frame-12(1).png" id="2_n61mk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n61mk"]
+radius = 14.0
+
+[node name="Boot" type="Area2D"]
+z_index = 5
+collision_mask = 16
+script = ExtResource("1_n61mk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n61mk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n61mk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

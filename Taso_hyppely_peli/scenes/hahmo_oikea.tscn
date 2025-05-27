@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjsmt6yd4gjvq"]
+[gd_scene load_steps=21 format=3 uid="uid://bjsmt6yd4gjvq"]
 
 [ext_resource type="Texture2D" uid="uid://djod4xfoi7ht0" path="res://assets/hahmo/pixil-frame-21.png" id="1_64pnd"]
 [ext_resource type="Script" uid="uid://cer4k6fotpqoo" path="res://scripts/room_detector.gd" id="1_o1tbo"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://sb7am1ttm2si" path="res://assets/hahmo/pixil-frame-23.png" id="10_8l16e"]
 [ext_resource type="Texture2D" uid="uid://cjbf7dbejyn5p" path="res://assets/hahmo/pixil-frame-1(4).1.png" id="11_lgv2t"]
 [ext_resource type="Texture2D" uid="uid://qqkmlavme570" path="res://assets/hahmo/pixil-frame-1(5).png" id="12_t3u1b"]
+[ext_resource type="AudioStream" uid="uid://b3ga4qplx7vhy" path="res://assets/sounds/jump.wav" id="15_8l16e"]
+[ext_resource type="AudioStream" uid="uid://c1gp6wdkoqdug" path="res://assets/sounds/Double Jump.wav" id="16_lgv2t"]
+[ext_resource type="AudioStream" uid="uid://0dhypkwfrops" path="res://assets/sounds/tap.wav" id="17_t3u1b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iwxjy"]
 animations = [{
@@ -92,6 +95,8 @@ height = 54.0
 size = Vector2(0.1, 0.1)
 
 [node name="PlatformingPlayer" type="CharacterBody2D"]
+top_level = true
+z_index = 10
 collision_layer = 16
 collision_mask = 32
 script = ExtResource("1_o1tbo")
@@ -129,6 +134,19 @@ collision_mask = 528
 light_mask = 0
 visibility_layer = 128
 shape = SubResource("RectangleShape2D_2rbfq")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_8l16e")
+volume_db = -34.878
+
+[node name="DoubleJumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_lgv2t")
+volume_db = -25.705
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_t3u1b")
+volume_db = -36.78
+max_distance = 535.0
 
 [connection signal="area_entered" from="RoomDetector" to="." method="_on_room_detector_area_entered"]
 [connection signal="area_entered" from="RoomDetector2" to="." method="_on_room_detector_area_entered"]

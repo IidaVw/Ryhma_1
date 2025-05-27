@@ -4,7 +4,15 @@ var death_timer: Timer
 var respawn_timer: Timer
 var respawning_player: CharacterBody2D = null
 
+# Death sound - ei @onready koska luomme Timer nodet koodissa
+var death_sound: AudioStreamPlayer2D
+
 func _ready():
+	# Get death sound
+	death_sound = get_node_or_null("DeathSound")
+	if not death_sound:
+		print("Warning: DeathSound not found in ", name)
+	
 	# Create death timer (delay before respawn)
 	death_timer = Timer.new()
 	death_timer.one_shot = true
@@ -21,6 +29,15 @@ func _ready():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and body is CharacterBody2D and death_timer.is_stopped():
+		print("Player died! Playing death sound...")
+		
+		# Play death sound immediately when player dies
+		if death_sound and is_instance_valid(death_sound):
+			death_sound.play()
+			print("Death sound played")
+		else:
+			print("Death sound not available")
+		
 		GameManager.add_death()
 		respawning_player = body
 		

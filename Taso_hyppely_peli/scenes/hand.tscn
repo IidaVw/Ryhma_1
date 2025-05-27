@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://smivueud77g0"]
+
+[ext_resource type="Script" uid="uid://cawdc34indsmp" path="res://scenes/Gloves.gd" id="1_cmdsa"]
+[ext_resource type="Texture2D" uid="uid://b1xjo8oc6dnor" path="res://scenes/bloks/pixil-frame-13(1).png" id="2_cmdsa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmdsa"]
+radius = 15.0
+
+[node name="hand" type="Area2D"]
+z_index = 5
+collision_mask = 16
+script = ExtResource("1_cmdsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cmdsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cmdsa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

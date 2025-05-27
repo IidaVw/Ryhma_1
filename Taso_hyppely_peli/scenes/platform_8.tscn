@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlxv31xfm7mxc"]
+
+[ext_resource type="Texture2D" uid="uid://bfu1y0ce65mnd" path="res://scenes/bloks/pixil-frame-7(2).png" id="1_nlv3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4why"]
+size = Vector2(98.375, 61.5)
+
+[node name="platform8" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15, -0.999995)
+scale = Vector2(3.125, 2.125)
+texture = ExtResource("1_nlv3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14.8125, -1)
+shape = SubResource("RectangleShape2D_r4why")
+one_way_collision = true

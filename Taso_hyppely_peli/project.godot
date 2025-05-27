@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 GameManager="*res://scripts/game_manager.gd"
 Global="*res://scripts/Global.gd"
 
+[gui]
+
+theme/custom_font="uid://0mgvi33lt28e"
+
 [input]
 
 jump={
